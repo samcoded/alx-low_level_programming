@@ -8,26 +8,21 @@
  */
 int main(void)
 {
-	int counter = 0;
-	unsigned long first = 0;
-	unsigned long second = 1;
-	unsigned long fib;
+	int i = 3;
+	unsigned long int a = 1, b = 2, next = 0;
 
-	while (counter <= 97)
+	printf("1, 2, ");
+	while (i <= 100)
 	{
-		fib = first + second;
-		if (counter < 97)
-		{
-			printf("%lu, ", fib);
-		}
-		else
-		{
-			printf("%lu", fib);
-		}
-		first = second;
-		second = fib;
-		counter++;
+		next = a + b;
+		a = b;
+		b = next;
+		printf("%lu", next);
+
+		if (i < 98)
+			printf(", ");
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
