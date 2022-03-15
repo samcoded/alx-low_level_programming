@@ -1,4 +1,4 @@
-#include "_putchar.c"
+#include "main.h"
 
 /**
  * print_sign - checks whether a number is -ve, 0, or +ve
