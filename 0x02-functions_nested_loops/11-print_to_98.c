@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_to_98 - prints from a given number up to 98
@@ -8,76 +9,18 @@
  */
 void print_to_98(int n)
 {
-	int t, d;
 
-	if (n > 98)
+	while (n < 98)
 	{
-		for (; n >= 98; n--)
-		{
-			if (n != 98)
-			{
-				if (n > 99)
-				{
-					d = n / 100;
-					_putchar(d % 10 + '0');
-				}
-
-				if (n > 9)
-				{
-					t = n / 10;
-					_putchar(t % 10 + '0');
-				}
-				_putchar(n % 10 + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar('9');
-				_putchar('8');
-				_putchar('\n');
-			}
-		}
+		printf("%i, ", n);
+		n++;
 	}
-	else
+	while (n > 98)
 	{
-		for (; n <= 98; n++)
-		{
-			if (n < 0)
-			{
-				_putchar('-');
-				if (n < -9)
-				{
-					t = n / 10;
-					_putchar((t * -1) % 10 + '0');
-				}
-				_putchar((n * -1) % 10 + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
-			else if (n != 98)
-			{
-				if (n > 99)
-				{
-					d = n / 100;
-					_putchar(d % 10 + '0');
-				}
-
-				if (n > 9)
-				{
-					t = n / 10;
-					_putchar(t % 10 + '0');
-				}
-				_putchar(n % 10 + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar('9');
-				_putchar('8');
-				_putchar('\n');
-			}
-		}
+		printf("%i, ", n);
+		n--;
 	}
+
+	printf("98");
+	putchar('\n');
 }
