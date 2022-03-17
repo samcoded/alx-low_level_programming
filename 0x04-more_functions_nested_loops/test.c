@@ -1,12 +1,6 @@
-#include "main.h"
+#include "_putchar.c"
 
-/**
- * print_triangle - print triangle
- * @size : integer type
- * Return:void
- */
-
-void print_triangle(int size)
+int print_triangle(int size)
 {
 	int i, j;
 
@@ -27,4 +21,14 @@ void print_triangle(int size)
 	}
 	if (size <= 0)
 		_putchar('\n');
+	return (0);
+}
+
+int main(void)
+{
+	print_triangle(2);
+	print_triangle(10);
+	print_triangle(1);
+	print_triangle(0);
+	return (0);
 }
