@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _puts - ouput
  * @str: string
