@@ -10,15 +10,19 @@
 char *_strncat(char *dest, char *src, int n)
 {
 
-	int dest_len, i;
-	for (dest_len = 0; dest[dest_len] != '\0'; dest_len++)
-		;
+	int length, j;
+	/* j is a counter for  n bytes of src to be concatenated */
+	/* length = length of destination string */
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[dest_len + i] = src[i];
-
-	/*should end with a end of string char*/
-	dest[dest_len + i] = '\0';
-
+	length = 0;
+	while (dest[length] != '\0')
+	{
+		length++;
+	}
+	for (j = 0; j < n && src[j] != '\0'; j++, length++)
+	{
+		dest[length] = src[j];
+	}
+	dest[length] = '\0';
 	return (dest);
 }
