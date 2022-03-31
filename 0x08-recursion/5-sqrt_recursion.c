@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * _sqrt - _sqrt_recursion
+ * actual_sqrt_recursion - _sqrt_recursion
  * @n: integer paramtr
  * @i: integer parameter
  * Return: sqrt
@@ -27,5 +27,5 @@ int actual_sqrt_recursion(int n, int i)
 		return (-1);
 	if (i * i == n)
 		return (i);
-	return (_sqrt(n, i + 1));
+	return (actual_sqrt_recursion(n, i + 1));
 }
