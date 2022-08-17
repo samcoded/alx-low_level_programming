@@ -43,6 +43,7 @@ def get_borders(col, row, grid):
             horizontal_borders += 1
     return vertical_borders + horizontal_borders
 
+
 if __name__ == "__main__":
     grid = [
         [0, 0, 0, 0, 0, 0],
